@@ -11,6 +11,8 @@ st.sidebar.title("App Settings")
 
 personality = st.sidebar.selectbox(
     "Who do you want to talk to?",
+    # TASK 2: PERSONA EXPANSION
+    # Added more creative personalities
     [
         "An expert Hacker",
         "An angry Ravi Shastri",
