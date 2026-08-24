@@ -1,0 +1,164 @@
+# Assignment: The "Life-OS" Wellbeing Dashboard
+
+# Objective
+# ● Build a professional Streamlit dashboard to visualize screen-time data.
+# ● Use Gemini API as a personalized, brutal-but-fair productivity/lifestyle coach.
+# ● Combine Data Visualization + UI/UX + API Integration + Prompt Engineering.
+
+# Tech Stack
+# ● Streamlit
+# ● Pandas
+# ● Google Gemini API
+
+# Task 1: Create the Synthetic Dataset
+# ● Create a file named screentime.csv.
+# ● Add at least 14 days of screen-time data.
+# ● Include these columns:
+#   ○ Date
+#   ○ App_Name
+#   ○ Category
+#   ○ Minutes_Used
+# ● Use realistic apps and categories such as:
+#   ○ Instagram → Social Media
+#   ○ YouTube → Entertainment
+#   ○ VS Code → Coding
+#   ○ LeetCode → Education
+#   ○ WhatsApp → Social Media
+
+# Task 2: Load the Data
+# ● Create the Streamlit application.
+# ● Load the CSV using:
+#   pd.read_csv("screentime.csv")
+# ● Convert the Date column into a proper datetime format.
+
+# Task 3: Build the Sidebar Controls
+# ● Create an st.sidebar.
+# ● Add an st.selectbox() to select a specific day.
+# ● Add an st.slider() to set the user's maximum daily screen-time goal.
+# ● Allow the user to change these values interactively.
+
+# Task 4: Build the KPI Dashboard
+# ● Use st.columns() to create a professional KPI row.
+# ● Display:
+#   ○ Total screen time for the selected day.
+#   ○ Most-used app of the day.
+#   ○ Difference between actual usage and daily goal.
+# ● Use st.metric().
+# ● Use delta_color="inverse" where appropriate.
+
+# Task 5: Add Screen-Time Visualizations
+# ● Create a 14-day screen-time trend.
+# ● Use st.line_chart() or st.bar_chart().
+# ● Add a category-wise usage chart for the selected day.
+# ● Optionally add an app-wise usage chart.
+# ● Keep the layout visually similar to a professional SaaS dashboard.
+
+# Task 6: Build the Data Bridge for Gemini
+# ● Gemini should not receive the raw Pandas DataFrame.
+# ● Aggregate the selected day's data by Category.
+# ● Calculate total minutes for each category.
+# ● Convert the summarized data into a clean string.
+# ● Use .to_string() or .to_json().
+
+# Task 7: Integrate Gemini API
+# ● Configure the Gemini API using an environment variable.
+# ● Create a specific f-string prompt.
+# ● Send the summarized screen-time data to Gemini.
+# ● Instruct Gemini to behave as a brutal-but-fair productivity/lifestyle coach.
+
+# Task 8: Make the AI Advice Specific
+# ● Gemini should analyze the user's actual screen-time behavior.
+# ● Do NOT allow generic advice such as:
+#   "Use your phone less."
+# ● Ask Gemini to identify the biggest time-wasting categories.
+# ● Ask it to suggest realistic physical/real-world replacements.
+# ● Example:
+#   ○ Excessive TikTok → exercise / walking / reading.
+#   ○ Excessive YouTube → focused study / hobby.
+#   ○ Excessive social media → meeting friends / outdoor activity.
+# ● Ask Gemini to estimate how much time the user can reclaim.
+
+# Task 9: Display the AI Coach
+# ● Add a dedicated "Life-OS Coach" section.
+# ● Add a button to generate the coaching report.
+# ● Display Gemini's response using st.markdown().
+# ● Use st.info(), st.warning(), or st.error() depending on screen-time severity.
+# ● Make the AI response easy to read.
+
+# Task 10: Add the Innovation Feature
+# ● Choose ONE of the following:
+#
+#   Option A — Voice Journal
+#   ● Integrate streamlit-mic-recorder.
+#   ● Let the user record a short daily reflection.
+#   ● Send the reflection + screen-time data to Gemini.
+#
+#   Option B — Guilt-Trip Avatar
+#   ● Ask Gemini to generate a visual prompt based on the user's behavior.
+#   ● Generate an image from that prompt.
+#   ● Display the image on the dashboard.
+#
+#   Option C — Shareable Accountability Link ⭐ Recommended
+#   ● Use st.query_params.
+#   ● Put the selected day's screen time into the URL.
+#   ● Allow the user to copy/share the URL.
+#   ● Anyone opening the link can see the shared screen-time statistic.
+
+# Task 11: Protect the API Key
+# ● Create a .env file.
+# ● Store the Gemini API key inside it.
+# ● NEVER upload .env to GitHub.
+# ● Add .env to .gitignore.
+# ● Add the required dependencies to requirements.txt.
+
+# Task 12: Create a Professional README
+# ● Create a custom README.md.
+# ● Explain what Life-OS does.
+# ● Mention the technology stack.
+# ● Explain the Gemini coaching feature.
+# ● Add screenshots of the dashboard.
+# ● Add instructions for running the project locally.
+
+# Task 13: Test the Application
+# ● Run the app locally using:
+#   streamlit run app.py
+# ● Check the CSV loads correctly.
+# ● Test date selection.
+# ● Test the daily goal slider.
+# ● Verify KPI calculations.
+# ● Verify the charts.
+# ● Test Gemini coaching.
+# ● Test the innovation feature.
+# ● Make sure there are no API-key errors.
+
+# Task 14: Deploy the Application
+# ● Push the project to a public GitHub repository.
+# ● Deploy the Streamlit app using Streamlit Community Cloud
+#   or another supported platform.
+# ● Add the Gemini API key using the deployment platform's Secrets.
+# ● Verify the live application works.
+
+# Task 15: Final Submission
+# ● Submit the live deployment URL.
+# ● Submit the public GitHub repository URL.
+# ● Make sure requirements.txt is included.
+# ● Make sure .env is NOT included.
+# ● Make sure README.md is included.
+
+# Pre-Submission Checklist
+# ● [ ] 14+ days of data created.
+# ● [ ] screentime.csv included.
+# ● [ ] Sidebar with selectbox + slider.
+# ● [ ] KPI row created using st.columns + st.metric.
+# ● [ ] 14-day trend chart added.
+# ● [ ] Category/app visualizations added.
+# ● [ ] Data bridge created using aggregation + .to_string()/.to_json().
+# ● [ ] Gemini API integrated successfully.
+# ● [ ] AI gives specific lifestyle recommendations.
+# ● [ ] AI output displayed cleanly.
+# ● [ ] One Innovation Feature implemented.
+# ● [ ] requirements.txt included.
+# ● [ ] .env hidden from GitHub.
+# ● [ ] Professional README.md created.
+# ● [ ] App deployed successfully.
+# ● [ ] Live URL + GitHub URL ready for submission.
