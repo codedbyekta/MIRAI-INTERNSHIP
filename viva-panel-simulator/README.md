@@ -102,17 +102,3 @@ the answer was thorough enough. If it was vague or surface-level, Gemini generat
 targeted follow-up question and it gets inserted right after the current question in
 the interview queue. This is capped at 3 follow-ups per session so the interview can't
 grow unbounded.
-
-## → Rubric Self-Check
-- [x] `st.session_state` drives the full multi-question, adaptive interview flow
-- [x] `st.form` used to batch input and avoid redundant API calls
-- [x] Duplicate-audio guard (`processed_audio_hash`) prevents re-processing on rerun
-- [x] Multimodal Gemini use: audio transcription + vision-based posture read
-- [x] Three distinct system-prompted personas, not a generic chatbot
-- [x] Adaptive, non-hardcoded follow-up questions based on answer quality
-- [x] `st.metric` with per-persona averages, `st.data_editor` breakdown table, `st.line_chart` trend
-- [x] SQLite-backed session history with a dedicated history view
-- [x] Deployed on Streamlit Community Cloud
-
----
-Built for the MirAI School of Technology Capstone.
