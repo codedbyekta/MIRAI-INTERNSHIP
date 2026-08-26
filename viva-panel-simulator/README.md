@@ -9,9 +9,6 @@ $ cat description.txt
 > from a different lens.
 ```
 
-## → Live Demo
-🔗 [Add your deployed Streamlit Cloud link here]
-
 ## → Why this exists
 Most mock-interview tools give you a single generic score. Real interview panels
 don't work that way — different evaluators care about different things. This app
